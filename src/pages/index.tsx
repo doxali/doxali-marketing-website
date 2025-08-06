@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Doxali | AI Powered Document Intelligence</title>
+        <title>Doxali | AI Powered Document Extraction</title>
       </Head>
       <Header />
       <main>

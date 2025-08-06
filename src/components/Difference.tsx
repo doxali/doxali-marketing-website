@@ -25,7 +25,7 @@ export default function Difference() {
 
   const features = [
     {
-      title: 'Smart Abstraction Powered by AI',
+      title: 'AI Powered Smart Extraction',
       icon: <Brain className="w-8 h-8 text-[#2fc4a0] mx-auto mb-3" />,
       desc: 'Extract critical fields in seconds. Powered by GPT-4 and trained on real-world documents.',
       delay: '0s',

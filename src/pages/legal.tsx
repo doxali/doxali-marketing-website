@@ -40,7 +40,7 @@ export default function LegalPage() {
           <section className="space-y-4 mb-10">
             <h2 className="text-xl font-semibold">Refund Policy</h2>
             <p className="text-gray-600 dark:text-gray-400">
-              Purchases are final once document abstraction has been completed. Please confirm file selection and settings before checkout.
+              Purchases are final once document extraction has been completed. Please confirm file selection and settings before checkout.
             </p>
             <Link href="/refund" className="text-[#2fc4a0] hover:text-[#28b093] text-sm font-medium">
               View full Refund Policy →
@@ -60,7 +60,7 @@ export default function LegalPage() {
           <section className="space-y-4">
             <h2 className="text-xl font-semibold">Scope Disclaimer</h2>
             <p className="text-gray-600 dark:text-gray-400">
-              Review which document types and clause categories are currently supported by Doxali — and which fall outside our abstraction scope.
+              Review which document types and upload categories are currently supported by Doxali — and which fall outside our extraction scope.
             </p>
             <Link href="/scope" className="text-[#2fc4a0] hover:text-[#28b093] text-sm font-medium">
               View Scope Disclaimer →

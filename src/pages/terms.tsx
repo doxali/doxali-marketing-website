@@ -17,10 +17,10 @@ export default function TermsPage() {
         <div className="bg-white dark:bg-[#1a1a1a] rounded-2xl shadow-md p-6 md:p-10 space-y-6">
           <h1 className="text-4xl font-bold">Terms of Service</h1>
           <p>
-            By using Doxali, you agree to abide by our terms and conditions. All document abstractions are subject to system availability and data quality, and must comply with applicable usage guidelines.
+            By using Doxali, you agree to abide by our terms and conditions. All document extractions are subject to system availability and data quality, and must comply with applicable usage guidelines.
           </p>
           <p>
-            You are responsible for the accuracy and appropriateness of the documents you submit. While Doxali uses AI to assist in extraction, final review and verification remain your responsibility. Our platform does not constitute legal advice.
+            You are responsible for the accuracy and appropriateness of the documents you submit. While Doxali uses AI to assist in extraction, final review and verification remain your responsibility. Our platform does not constitute any legal advice.
           </p>
           <p>
             These terms may be updated periodically. Continued use of the platform constitutes acceptance of the most current version.

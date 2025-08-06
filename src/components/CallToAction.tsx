@@ -74,7 +74,7 @@ useEffect(() => {
 <h2 className={`text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 transition-all duration-1000 delay-500 ${
   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
 }`}>
-  <span className="bg-gradient-to-r from-[#2fc4a0] to-[#2fc4a0] bg-clip-text text-transparent">Transform Documents</span>
+  <span className="bg-gradient-to-r from-[#2fc4a0] to-[#2fc4a0] bg-clip-text text-transparent">Document Extraction</span>
   <br />
   <span className="text-[#0c1f1b] dark:text-white">in Minutes</span>
 </h2>
@@ -84,7 +84,7 @@ useEffect(() => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
           <div className="w-2 h-2 bg-[#2fc4a0] rounded-full mr-2 animate-pulse"></div>
-          <span className="text-sm font-medium text-[#2fc4a0]">AI-Powered Document Processing</span>
+          <span className="text-sm font-medium text-[#2fc4a0]">AI Powered Document Extraction</span>
         </div>
 
 
@@ -93,7 +93,7 @@ useEffect(() => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
           Experience the future of document analysis with{' '}
-          <span className="text-[#2fc4a0] font-semibold">precision AI</span> that understands context, extracts insights, and delivers results faster than ever before.
+          <span className="text-[#2fc4a0] font-semibold">AI Precision</span> that understands Context, Extracts highlights, and delivers faster results for your team.
         </p>
 
         {/* Feature highlights with icons */}
@@ -115,7 +115,7 @@ useEffect(() => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               ),
-              text: 'Precision AI',
+              text: 'AI with Specific Context',
             },
             {
               icon: (
@@ -123,7 +123,7 @@ useEffect(() => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               ),
-              text: 'Secure & Private',
+              text: 'Private & Secure',
             },
             {
               icon: (
@@ -131,7 +131,7 @@ useEffect(() => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               ),
-              text: 'Smart Analytics',
+              text: 'Smart Dashboard',
             },
           ].map((feature, idx) => (
             <div
@@ -160,24 +160,6 @@ useEffect(() => {
             </span>
           </a>
         </div>
-
-        {/* Trust indicators */}
-<div className="flex justify-center items-center space-x-8 mt-12 ...">
-  <div className="flex items-center space-x-2">
-    <div className="w-3 h-3 bg-[#2fc4a0] rounded-full"></div>
-    <span className="text-xs text-slate-700 dark:text-slate-400">99.9% Uptime</span>
-  </div>
-  <div className="w-px h-4 bg-gray-300 dark:bg-slate-600"></div>
-  <div className="flex items-center space-x-2">
-    <div className="w-3 h-3 bg-[#6fe1c3] rounded-full"></div>
-    <span className="text-xs text-slate-700 dark:text-slate-400">SOC 2 Compliant</span>
-  </div>
-  <div className="w-px h-4 bg-gray-300 dark:bg-slate-600"></div>
-  <div className="flex items-center space-x-2">
-    <div className="w-3 h-3 bg-[#a4f0da] rounded-full"></div>
-    <span className="text-xs text-slate-700 dark:text-slate-400">GDPR Ready</span>
-  </div>
-</div>
 
       </div>
       <style jsx>{`

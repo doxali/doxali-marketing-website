@@ -6,7 +6,7 @@ export default function ChatBotToggle() {
     {
       role: 'system',
       content:
-        'You are a helpful assistant for Doxali, an AI-powered legal document abstraction service. Answer questions about how the platform works, what it supports, and direct users to links like /about, /faq, /pricing, or /contact. Keep answers short and professional.',
+        'Doxali, is an AI Powered Document Extraction Service. Answer questions about how the platform works, what it supports, and direct users to links like /about, /faq, /pricing, or /contact. Keep answers short and professional.',
     },
   ]);
   const [input, setInput] = useState('');

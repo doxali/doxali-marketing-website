@@ -11,17 +11,17 @@ const faqData = [
   {
     question: 'What exactly does Doxali do?',
     answer:
-      'Doxali reads your contracts and legal documents, extracts key data, generates structured summaries, and lets you chat with the content like you would with a legal expert. Upload a file and get clarity instantly.'
+      'Doxali reads your contracts and documents, extracts key data, generates structured summaries, and lets you chat with the content like you would with a specialized professional. Upload a file and get clarity instantly.'
   },
   {
     question: 'How is Doxali different from a basic PDF reader?',
     answer:
-      'Unlike a PDF reader, Doxali understands the text — it pulls out deadlines, obligations, key terms, and more. Then it explains them in plain English or answers your questions in a chat. It’s like having an AI-powered analyst built into your workflow.'
+      'Unlike a PDF reader, Doxali understands the text — it pulls out deadlines, obligations, key terms, and more. Then it explains them in plain English or answers your questions in a chat. It’s like having an AI Powered analyst built into your workflow.'
   },
   {
     question: 'What types of documents can I upload?',
     answer:
-      'Doxali supports commercial leases, PSAs, loan agreements, NDAs, term sheets, corporate bylaws, and over 30 other legal document types — with custom templates for each. Just upload your PDF and the system routes it automatically.'
+      'Doxali supports commercial leases, PSAs, loan agreements, NDAs, term sheets, corporate bylaws, and over 30 other supported document types — with custom templates for each. Just upload your PDF and the system routes it automatically.'
   },
   {
     question: 'Do I need to tag or format the document in a specific way?',
@@ -51,7 +51,7 @@ const faqData = [
   {
     question: 'Can I use Doxali without being a lawyer or expert?',
     answer:
-      'Yes. Doxali is built for real-world users — founders, ops teams, finance leads, assistants — anyone who needs to understand a legal document without reading every page or hiring counsel.'
+      'Yes. Doxali is built for real-world users — founders, ops teams, finance leads, assistants — anyone who needs to understand a document without reading every page or without hiring outside counsel.'
   },
   {
     question: 'What if I need help or custom features?',
@@ -89,7 +89,7 @@ export default function ProductPage() {
         <title>Why Doxali? | Product Overview</title>
         <meta
           name="description"
-          content="Discover what makes Doxali uniquely powerful for legal document workflows."
+          content="Discover what makes Doxali uniquely powerful for document extraction and automation workflows."
         />
       </Head>
 
@@ -101,10 +101,19 @@ export default function ProductPage() {
           <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Why Doxali?
           </h1>
-          <p className="text-lg max-w-2xl mx-auto mb-8 text-gray-700 dark:text-gray-300">
-            From AI-powered extraction to transparent pricing and downloadable summaries,
-            Doxali transforms your legal workflows.
-          </p>
+<div className="text-lg text-left leading-relaxed max-w-4xl mx-auto mb-8 space-y-8 text-gray-700 dark:text-gray-300">
+  <p>
+    Doxali is built for teams that work with complex contracts, financial agreements, and regulatory documents, and want answers, not just files. Whether you're managing leases, loan agreements, or purchase contracts, our AI extracts critical information in seconds, reducing manual review and freeing your team to focus on analysis and action. Unlike traditional tools that require templates or predefined fields, Doxali understands unstructured language. It identifies key clauses, flags risk language, and delivers structured summaries that are easy to review, export, and integrate into your workflow. No training required.
+  </p>
+
+  <p>
+    Transparency is core to our approach. We offer per page and per message pricing, so you only pay for what you use. Every document processed includes a downloadable summary for your records, and enterprise users can scale with advanced features like SOC 2 compliance, SSO, and dedicated token pools. Our goal is to help legal, finance, and operations teams work faster. Not replace them. By combining AI with Specific Context (never chunked or embedded data), Doxali turns every document into a source of knowledge.
+  </p>
+
+  <p>
+    Whether you're uploading a single lease or processing hundreds of loan files, Doxali adapts to your scale, your use case, and your speed. We're not just an AI product. We're the new standard for document interaction.
+  </p>
+</div>
           <Link
             href="/launch"
             className="inline-block px-8 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-[#2fc4a0] to-[#28b093] hover:opacity-90 shadow-md transition"
@@ -114,7 +123,7 @@ export default function ProductPage() {
         </section>
 
         {/* Comparison Table */}
-        <section className="pt-6 pb-16 px-6">
+        <section className="pt-30 pb-36 px-4">
           <div className="max-w-4xl mx-auto overflow-x-auto">
             <table className="min-w-full text-left border-collapse">
               <thead>
@@ -127,12 +136,12 @@ export default function ProductPage() {
               <tbody>
                 {[
                   ['Instant Document Search With Specific Context', true, false],
-                  ['Downloadable AI-Written Summaries', true, false],
-                  ['Field-Level Extraction (Dates, Names, Clauses)', true, false],
+                  ['Downloadable AI Extraction Summaries', true, false],
+                  ['Field Specific Extraction (Dates, Names, Clauses)', true, false],
                   ['See Your Cost Before Uploading', true, false],
-                  ['Export Structured Data To PDF / CSV / DOCX', true, false],
+                  ['Export Structured Highlights To PDF / CSV / DOCX', true, false],
                   ['Built For Contracts, Not Chat Replies', true, false],
-                  ['Custom Prompt Templates', true, false],
+                  ['Scalable Pricing For Different Teams ', true, true],
                   ['SOC 2, GDPR, Encryption-At-Rest', true, true],
                   ['Full Developer API Access', true, true],
                 ].map(([feature, dox, other], i) => (

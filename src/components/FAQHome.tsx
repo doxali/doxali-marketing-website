@@ -4,10 +4,10 @@ const faqData = [
   {
     question: 'What makes Doxali different?',
     answer:
-      'Most tools claim to handle documents. Doxali *actually* reads them — extracting key terms, summarizing dense content, and letting you chat with your files like a human expert. No jargon. No guesswork. Just clarity at speed.'
+      'Most tools claim to handle documents. Doxali *actually* reads them, extracting key terms, summarizing dense content, and letting you chat with your files like a human expert. No jargon. No guesswork. Just clarity at speed.'
   },
   {
-    question: 'How does pricing work — and is it really that simple?',
+    question: 'How does pricing work? And is it really that simple?',
     answer:
       'Yes. $0.10 per page to extract and summarize. $8.99/month + $0.0467/message to chat with your documents. No confusing caps, no throttled speed — just full access and transparent usage-based billing you can track in real time.'
   },
@@ -19,7 +19,7 @@ const faqData = [
   {
     question: 'Do I need a legal background or tech skills?',
     answer:
-      'Nope. Doxali is built for real people — not just lawyers or coders. It explains contracts, clauses, and summaries in plain English. If you can upload a PDF, you’re already a power user.'
+      'Nope. Doxali is built for real people, not just lawyers or coders. It explains contracts, clauses, and summaries in plain English. If you can upload a PDF, you’re already a power user.'
   },
   {
     question: 'Is my information safe?',
@@ -70,7 +70,7 @@ className="py-12 px-6 bg-white dark:bg-black text-[var(--foreground)]"
     >
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-center">
-          Common Questions, Simple Answers
+          Common Questions
         </h2>
 
         <label className="text-sm text-gray-500 dark:text-gray-400 mb-2 block">

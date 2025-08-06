@@ -3,133 +3,259 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQPricing from "@/components/FAQPricing";
+import { Star } from 'lucide-react';
 
 type BillingPeriod = "Monthly" | "Yearly";
 
 const plans = [
-  {
-    shortTitle: "Free",
-    title: "Free Tier (Starter Access)",
-    price: { Monthly: "$0/mo", Yearly: "$0/yr" },
-    features: [
-      "10 Pages Per Day (Text Extraction Only)",
-      "Chat With Your Documents (AI Assistant)",
-      "20,000 AI Tokens Per Day (Input + Output)",
-      "1 Saved Chat Thread",
-      "1 Add-On Per Day (e.g., Executive Summary)",
-      "No Subscription • No Credit Card Required",
-    ],
-    isCurrent: true,
-    ctaLabel: "Get Started",
-    ctaHref: "/signup",
+ {
+  shortTitle: "Free",
+  title: (
+    <div className="text-center">
+      Free Account
+      <br />
+      <span className="text-lx">(Quick Access)</span>
+    </div>
+  ),
+  price: {
+    Monthly: (
+      <div className="text-center">
+        <span className="text-xl font-bold">$0 Per Month</span>
+      </div>
+    ),
+    Yearly: (
+      <div className="text-center">
+        <span className="text-xl font-bold">$0 Per Year</span>
+      </div>
+    ),
   },
-  {
-    shortTitle: "Basic",
-    title: "Standard Account (Flat Rate)",
-    price: { Monthly: "Pay as you go", Yearly: "Pay as you go" },
-    features: [
-      "$0.05 Per Page (Text Extraction + Structured Abstraction)",
-      "$0.01 Per AI Message (Up to 15k Input / 5k Output Tokens)",
-      "10 GB Document Storage",
-      "Pay-As-You-Go • No Subscription",
-    ],
-    ctaLabel: "Upgrade Plan",
-    ctaHref: "/billing/standard",
+note: (
+  <div className="text-center space-y-2">
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>5 Pages Per Day</span>
+    </div>
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>AI Extraction Limited</span>
+    </div>
+    <div className="flex items-center justify-center gap-2 mt-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>3 Messages Per Day</span>
+    </div>
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>AI Assistant Limited</span>
+    </div>
+<div className="flex items-start justify-center gap-2 mt-2">
+  <Star className="w-4 h-4 mt-1 text-[#2fc4a0]" />
+  <div className="flex flex-col leading-tight text-left">
+    <span>1 Add On Per Day</span>
+    <span className="text-xs text-gray-500">(Coming Soon)</span>
+  </div>
+</div>
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>1 GB Document Storage</span>
+    </div>
+    <p className="mt-6">No Subscription</p>
+    <p className="mt-2">No Credit Card Required</p>
+  </div>
+),
+  isCurrent: true,
+  ctaLabel: "Get Started",
+  ctaHref: "/signup",
+},
+ {
+  shortTitle: "Standard",
+  title: (
+    <div className="text-center">
+      Standard Account
+      <br />
+      <span className="text-lx">(Flat Usage Rate)</span>
+    </div>
+  ),
+  price: {
+    Monthly: (
+      <div className="text-center">
+        <span className="text-xl">Pay-As-You-Go</span>
+      </div>
+    ),
+    Yearly: (
+      <div className="text-center">
+        <span className="text-xl font-bold">Pay as you go</span>
+      </div>
+    ),
   },
+note: (
+  <div className="text-center space-y-2">
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>$0.05 Per Page</span>
+    </div>
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>AI Extraction + Summary</span>
+    </div>
+    <div className="flex items-center justify-center gap-2 mt-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>$0.01 Per AI Message</span>
+    </div>
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>AI Assistant</span>
+    </div>
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>Document Context</span>
+    </div>
+    <div className="flex items-center justify-center gap-2 mt-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>10 GB Document Storage</span>
+    </div>
+    <p className="mt-6">No Subscription</p>
+    <p className="mt-2">Pay-As-You-Go</p>
+  </div>
+),
+  ctaLabel: "Upgrade Plan",
+  ctaHref: "/billing/standard",
+},
   {
-    shortTitle: "Business",
-    title: "Doxali Professional (Usage-Based)",
-    price: {
-      Monthly: "$19.99/mo",
-      Yearly: `$${(19.99 * 12 * 0.9).toFixed(2)}/yr`, // 10% discount
-    },
-    features: [
-      "$19.99 Monthly Subscription",
-      "$0.01 Per Page (Priority File Types Included)",
-      "AI Chat: $0.00015 per 1,000 Input Tokens",
-      "AI Chat: $0.00060 per 1,000 Output Tokens",
-      "Up to 100k Input / 25k Output Tokens Per Message",
-      "100 GB Document Storage",
-      "SOC 2 Type II, GDPR, TLS 1.2+, AES-256 Encryption",
-    ],
-    isFeatured: true,
-    ctaLabel: "Upgrade Plan",
-    ctaHref: "/billing/pro",
+    shortTitle: "Professional",
+    title: "Doxali Professional (Subscription)",
+price: {
+  Monthly: (
+    <div className="text-center">
+      <span className="text-xl font-bold">$19.99 Monthly</span>
+    </div>
+  ),
+  Yearly: (
+    <div className="text-center">
+      <span className="text-xl font-bold">
+        ${`${(19.99 * 12 * 0.9).toFixed(2)}`} Yearly
+      </span>
+      <br />
+      <span className="text-xs text-gray-500">(10% discount)</span>
+    </div>
+  ),
+},
+note: (
+  <div className="text-center space-y-2">
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>1000 Pages Per Month</span>
+    </div>
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>AI Extraction + Summary</span>
+    </div>
+    <div className="flex items-center justify-center gap-2 mt-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>500 Messages Per Month</span>
+    </div>
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>AI Assistant</span>
+    </div>
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>Comparison Context</span>
+    </div>
+    <div className="flex items-center justify-center gap-2 mt-2">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>100 GB Document Storage</span>
+    </div>
+    <div className="flex items-center justify-center gap-2 mt-6">
+      <Star className="w-4 h-4 text-[#2fc4a0]" />
+      <span>Access to All Add Ons</span>
+    </div>
+    <p className="mt-2 text-sm text-gray-500">(Coming Soon)</p>
+  </div>
+),
+isFeatured: true,
+ctaLabel: "Upgrade Plan",
+ctaHref: "/billing/pro",
   },
-  {
-    shortTitle: "Enterprise",
-    title: "Doxali Enterprise",
-    price: { Monthly: "—", Yearly: "—" },
-    features: [
-      "Custom Annual Contract (Contact Sales)",
-      "$0.005 Per Page (Extraction + Abstraction)",
-      "AI Chat: $0.00010 per 1,000 Input Tokens",
-      "AI Chat: $0.00040 per 1,000 Output Tokens",
-      "Up to 200k Input / 50k Output Tokens Per Message",
-      "Unlimited Document Storage",
-      "SSO, Dedicated Account Manager, SOC 2 Type II, SLA",
-      "On-Prem / VPC Deployment Option",
-    ],
-    ctaLabel: "Contact Sales",
-    ctaHref: "/contact",
+ {
+  shortTitle: "Enterprise",
+  title: "Doxali Enterprise (Contact Sales)",
+  price: {
+    Monthly: (
+      <div className="text-center">
+        <span className="text-xl font-bold">Custom Contract</span>
+      </div>
+    ),
+    Yearly: (
+      <div className="text-center">
+        <span className="text-xl font-bold">Custom Contract</span>
+      </div>
+    ),
   },
+note: (
+  <div className="text-center space-y-2">
+    <div className="flex items-center justify-center gap-2 mt-2">
+      <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
+      <span>$0.005 Per Page</span>
+    </div>
+    <div className="flex items-center justify-center gap-2">
+      <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
+      <span>Abstraction + Extraction</span>
+    </div>
+    <div className="flex items-center justify-center gap-2 mt-2">
+      <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
+      <span>$0.0001 Per AI Message</span>
+    </div>
+<div className="flex items-center justify-center gap-2">
+  <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
+  <span>Up to 200k Input Tokens Per Message</span>
+</div>
+<div className="flex items-center justify-center gap-2 -mt-1">
+  <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
+  <span>Up to 50k Output Tokens Per Message</span>
+</div>
+    <div className="flex items-center justify-center gap-2 mt-6">
+      <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
+      <span>Customizable Storage Limit</span>
+    </div>
+    <div className="flex items-center justify-center gap-2 mt-4">
+      <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
+      <span>Dedicated Account Manager, Concierge Support, SOC Type II</span>
+    </div>
+  </div>
+),
+  ctaLabel: "Contact Sales",
+  ctaHref: "/contact",
+}
 ];
 
 const comparisonSections = [
   {
     title: "Usage & Limits",
     rows: [
-      { label: "Documents Per Month", values: ["10", "100", "1,000", "Custom"] },
-      { label: "File Upload Size", values: ["5 MB", "20 MB", "100 MB", "Unlimited"] },
-      { label: "Storage Duration", values: ["7 Days", "30 Days", "180 Days", "Custom"] },
-      { label: "Users Per Account", values: ["1", "5", "25", "Unlimited"] },
-    ],
-  },
-  {
-    title: "AI Document Intelligence",
-    rows: [
-      { label: "Document Extraction", values: [true, true, true, true] },
-      { label: "Document Summarization", values: [true, true, true, true] },
-      { label: "Document Storage Access", values: [false, true, true, true] },
-      { label: "Document Specific Chat Context", values: [false, true, true, true] },
-      { label: "Custom Prompt Templates", values: [false, false, true, true] },
-    ],
-  },
-  {
-    title: "Integrations & Automation",
-    rows: [
-      { label: "Slack / Discord Intake", values: [false, true, true, true] },
-      { label: "Email-To-AI Input", values: [false, true, true, true] },
-      { label: "OpenAI API Integration", values: [false, true, true, true] },
-      { label: "Webhooks & Structured Exports", values: [false, false, true, true] },
+      { label: "Pages Per Month", values: ["30", "Custom", "1,000", "Custom"] },
+      { label: "Messages Per Month", values: ["90", "Custom", "500", "Custom"] },
+      { label: "Usage Refresh Period", values: ["1 Day", "Custom", "1 Month", "1 Year"] },
+      { label: "Document Storage Space", values: ["1 GB", "10 GB", "100 GB", "Custom"] },
     ],
   },
   {
     title: "Productivity Features",
     rows: [
-      { label: "Downloadable Summaries", values: [false, true, true, true] },
-      { label: "Clause Library & Reuse", values: [false, false, true, true] },
-      { label: "Bulk Document Import", values: [false, false, true, true] },
-      { label: "Version Comparison", values: [false, false, true, true] },
-    ],
-  },
-  {
-    title: "Insights & Analytics",
-    rows: [
-      { label: "Document Activity Reports", values: [false, true, true, true] },
-      { label: "Clause Usage Trends", values: [false, false, true, true] },
-      { label: "Exported Data Analysis", values: [false, false, true, true] },
-      { label: "Custom Dashboards", values: [false, false, false, true] },
+      { label: "AI Document Extraction", values: [true, true, true, true] },
+      { label: "AI Structured Document Summaries", values: [true, true, true, true] },
+      { label: "AI Document Assistant with Specific Context", values: [true, true, true, true] },
+      { label: "Document Storage Access", values: [true, true, true, true] },
+      { label: "Import Bult Documents", values: [false, true, true, true] },
+      { label: "Compare Multiple Documents with Specific Context", values: [false, false, true, true] },
     ],
   },
   {
     title: "Security & Compliance",
     rows: [
-      { label: "Google SSO", values: [false, true, true, true] },
-      { label: "SOC 2 Type II Readiness", values: [false, false, true, true] },
-      { label: "HIPAA & GDPR Support", values: [false, false, true, true] },
-      { label: "Audit Logs", values: [false, false, true, true] },
-      { label: "Custom Data Retention Policies", values: [false, false, false, true] },
+      { label: "Google SSO", values: [true, true, true, true] },
+      { label: "SOC 2 Type II Readiness", values: [true, true, true, true] },
+      { label: "HIPAA & GDPR Support", values: [true, true, true, true] },
+      { label: "Custom Data Retention Policies", values: [false, false, true, true] },
     ],
   },
   {
@@ -137,9 +263,8 @@ const comparisonSections = [
     rows: [
       { label: "Email Support", values: [true, true, true, true] },
       { label: "Priority Response Time", values: [false, false, true, true] },
-      { label: "Onboarding & Training", values: [false, false, true, true] },
-      { label: "Dedicated Account Manager", values: [false, false, false, true] },
-      { label: "Custom Deployment", values: [false, false, false, true] },
+      { label: "Dedicated Account Support", values: [false, false, true, true] },
+      { label: "Custom Deployment & Onboarding", values: [false, false, false, true] },
     ],
   },
 ];
@@ -192,11 +317,10 @@ export default function PricingPage() {
         {/* Hero */}
         <div className="max-w-3xl mx-auto text-center px-4 space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">
-            Clear, Scalable Pricing for Every Workflow
+            AI Access That Scales With Your Workflow
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Choose a tier that fits your volume, team size, and security needs—
-            starting free, scaling up.
+            Built to grow with your business whether you're solo or on a team.
           </p>
           <BillingToggle period={billingPeriod} setPeriod={setBillingPeriod} />
         </div>
@@ -229,18 +353,13 @@ export default function PricingPage() {
         )}
 
         <div>
-          <h2 className="text-xl font-semibold">{plan.title}</h2>
+          <h2 className="text-xl font-semibold text-center">{plan.title}</h2>
           <div className="mt-4 text-3xl font-bold">
             {plan.price[billingPeriod]}
           </div>
-          <ul className="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-            {plan.features.map((f) => (
-              <li key={f}>
-                <span className="text-[#28b093] font-bold mr-1">&#10003;</span>
-                {f}
-              </li>
-            ))}
-          </ul>
+          <div className="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
+  {plan.note}
+</div>
         </div>
 
         <a

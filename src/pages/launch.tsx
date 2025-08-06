@@ -43,7 +43,7 @@ export default function LaunchPage() {
             We're Putting on the Finishing Touches
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-10">
-            Doxali is almost ready. Sign up below and we’ll notify you the moment our AI-powered legal abstraction platform goes live.
+            Doxali is almost ready. Sign up below and we’ll notify you the moment our AI Powered Extraction platform goes live.
           </p>
         </section>
 

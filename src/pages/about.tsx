@@ -27,7 +27,7 @@ const MILESTONES = [
   {
     date: 'JAN 2026',
     title: 'AI Model v2 Deployed',
-    description: 'Rolled out next-gen contextual abstraction, enabling deeper understanding across diverse contractual agreements.',
+    description: 'Rolled out next-gen contextual extractions, enabling deeper understanding across diverse contractual agreements.',
   },
   {
     date: 'APR 2026',
@@ -136,7 +136,7 @@ const [visible, setVisible] = useState(true);
       <span className="text-[#2fc4a0]">Structured. Secure. Scalable.</span>
     </h1>
     <p className="text-lg text-gray-700 dark:text-gray-300 max-w-prose mb-8">
-      Doxali extracts critical clauses, structures your data, and summarizes complex documents — all in seconds, with real-world legal precision.
+      Doxali extracts critical clauses, structures your data, and summarizes complex documents — all in seconds, with real-world data precision.
     </p>
     <Link
       href="/launch"
@@ -211,7 +211,7 @@ const [visible, setVisible] = useState(true);
 <p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
   At Doxali, we believe teams should spend their time driving strategic decisions, not buried in repetitive admin work.
 </p><p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  That’s why we built a precision-engineered platform that automates contract analysis, document review, and term abstraction. We eliminate the bottlenecks so teams can move faster, operate smarter, and deliver higher value across the business.
+  That’s why we built a precision-engineered platform that automates contract analysis, document review, and term Extraction. We eliminate the bottlenecks so teams can move faster, operate smarter, and deliver higher value across the business.
 </p>
           <h2 className="text-3xl font-bold mt-8">How It Started</h2>
           <p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
@@ -260,7 +260,7 @@ const [visible, setVisible] = useState(true);
 </p>
 
 <p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  <span className="font-semibold">OpenAI</span> powers the intelligence layer of Doxali, enabling our platform to read, extract, and structure data from contracts and documents using cutting-edge language models trained on real-world legal workflows.
+  <span className="font-semibold">OpenAI</span> powers the intelligence layer of Doxali, enabling our platform to read, extract, and structure data from contracts and documents using cutting-edge language models trained on real-world automation workflows.
 </p>
 
 <p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed font-semibold text-center">
@@ -276,10 +276,10 @@ const [visible, setVisible] = useState(true);
 <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#2fc4a0] dark:bg-[#28b093] text-center overflow-hidden">
   <div className="max-w-6xl mx-auto px-6 py-16">
     <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 drop-shadow-lg">
-      Data Extraction Powered by AI
+      AI Powered Data Extraction 
     </h2>
     <p className="text-white/90 mb-8 text-lg max-w-xl mx-auto">
-      Try Doxali free! Upload a document and experience fast, accurate abstractions.
+      Try Doxali free! Upload a document and experience fast, accurate extraction.
     </p>
     <Link
       href="/launch"

@@ -4,7 +4,7 @@ const faqData = [
   {
     question: 'What exactly does Doxali do?',
     answer:
-      'Doxali reads your contracts and legal documents, extracts key data, generates structured summaries, and lets you chat with the content like you would with a legal expert. Upload a file and get clarity instantly.'
+      'Doxali reads your contracts or documents, extracts key data, generates structured summaries, and lets you chat with the content like you would with a specialized professional. Upload a file and get clarity instantly.'
   },
   {
     question: 'How is Doxali different from a basic PDF reader?',
@@ -14,7 +14,7 @@ const faqData = [
   {
     question: 'What types of documents can I upload?',
     answer:
-      'Doxali supports commercial leases, PSAs, loan agreements, NDAs, term sheets, corporate bylaws, and over 30 other legal document types — with custom templates for each. Just upload your PDF and the system routes it automatically.'
+      'Doxali supports commercial leases, PSAs, loan agreements, NDAs, term sheets, corporate bylaws, and over 30 other document types — with custom templates for each. Just upload your PDF and the system routes it automatically.'
   },
   {
     question: 'Do I need to tag or format the document in a specific way?',
@@ -44,7 +44,7 @@ const faqData = [
   {
     question: 'Can I use Doxali without being a lawyer or expert?',
     answer:
-      'Yes. Doxali is built for real-world users — founders, ops teams, finance leads, assistants — anyone who needs to understand a legal document without reading every page or hiring counsel.'
+      'Yes. Doxali is built for real-world users — founders, ops teams, finance leads, assistants — anyone who need to understand complicated documents without reading every page or without hiring outside counsel.'
   },
   {
     question: 'What if I need help or custom features?',
@@ -80,11 +80,11 @@ export default function FAQProduct() {
     <section
       ref={ref}
       id="faq-product"
-      className="py-12 px-6 bg-white dark:bg-black text-[var(--foreground)]"
+      className="pt-8 pb-6 px-6 bg-white dark:bg-black text-[var(--foreground)]"
     >
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-center">
-          Product Questions, Real Answers
+          Product Questions
         </h2>
 
         <label className="text-sm text-gray-500 dark:text-gray-400 mb-2 block">

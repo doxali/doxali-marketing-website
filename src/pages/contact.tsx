@@ -41,7 +41,7 @@ export default function ContactPage() {
       <Header />
 
       <main ref={sectionRef} className="flex-1 w-full max-w-5xl mx-auto px-6 md:px-10 py-20 space-y-20">
-        {/* Introo */}
+        {/* Intro */}
         <section
           className={
             "text-center opacity-0 transition-opacity" +

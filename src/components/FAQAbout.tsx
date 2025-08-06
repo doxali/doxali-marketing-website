@@ -9,7 +9,7 @@ const faqData = [
   {
     question: 'When was Doxali founded?',
     answer:
-      'Doxali was founded in early 2025 after months of prototyping by a team of experts in AI, legal operations, and UX design.'
+      'Doxali was founded in early 2025 after months of prototyping by a team of experts in AI, Operations, and UX design.'
   },
   {
     question: 'What is Doxali’s mission?',
@@ -19,7 +19,7 @@ const faqData = [
   {
     question: 'Who’s behind Doxali?',
     answer:
-      'Our leadership team includes veterans from legal tech, AI engineering, and startup operations. Founders include a former M&A attorney, an AI/NLP engineer, and a systems-focused UX designer.'
+      'Our leadership team includes veterans from legal, tech, AI engineering, and startup operations. Founders include a former M&A attorney, an AI/NLP engineer, and a systems-focused UX designer.'
   },
   {
     question: 'What kind of impact has Doxali made so far?',
@@ -84,7 +84,7 @@ export default function FAQAbout() {
     >
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-center">
-          About Doxali — Frequently Asked
+          Doxali Questions
         </h2>
 
         <label className="text-sm text-gray-500 dark:text-gray-400 mb-2 block">

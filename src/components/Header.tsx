@@ -28,8 +28,8 @@ export default function Header() {
         <nav className="hidden md:flex gap-8 text-gray-700 dark:text-gray-300 text-sm">
           <Link href="/product" className="hover:text-[#28b093] transition">Product</Link>
           <Link href="/pricing" className="hover:text-[#28b093] transition">Pricing</Link>
-          <Link href="/resources" className="hover:text-[#28b093] transition">Resources</Link>
           <Link href="/about" className="hover:text-[#28b093] transition">About</Link>
+          <Link href="/resources" className="hover:text-[#28b093] transition">Resources</Link>
           <Link href="/contact" className="hover:text-[#28b093] transition">Contact</Link>
           <Link href="/blog" className="hover:text-[#28b093] transition">Blog</Link>
         </nav>

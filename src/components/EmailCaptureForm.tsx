@@ -34,7 +34,7 @@ export default function EmailCaptureForm() {
       <div className="bg-gradient-to-b from-gray-100 to-white dark:from-[#1d1d1d] dark:to-[#111] border border-white/10 rounded-2xl p-8 text-center">
         <h2 className="text-xl font-semibold mb-2">📬 Get the Latest from Doxali</h2>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-          Join 10,000+ readers for tips on AI-powered document review, legal automation, and product news.
+          Join 10,000+ readers for tips on AI Powered document review, legal automation, and product news.
         </p>
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 justify-center">
           <input

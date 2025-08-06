@@ -24,45 +24,58 @@ export default function Pricing() {
 
   const plans = [
     {
-      title: "Free Tier",
-      subtitle: "(Starter Access)",
+      title: "Free Account",
+      subtitle: "(Quick Access)",
       features: [
-        "10 Pages Per Day (Text Extraction Only)",
-        "Chat With Your Documents (AI Assistant)",
-        "20,000 AI Tokens Per Day",
-        "1 Saved Chat Thread",
-        "No Subscription • No Credit Card",
+        "5 Pages Per Day (AI Extraction Limited)",
+        "3 Messages Per Day (AI Assistant Limited)",
+        "1 GB of Storage",
+        "No Credit Card • No Subscription",
       ],
-      note:
-        "Upload, get smart extractions, and chat with your documents—free forever up to daily rate/storage limits.",
+note: (
+    <>
+      <p> Upload, Extract, and Chat with your document.</p>
+      <p className="mt-2">Daily Refresh.</p>
+    </>
+  ),
       delay: "0s",
     },
     {
       title: "Standard Account",
-      subtitle: "(Flat Rate)",
+      subtitle: "(Flat Usage Rate)",
       features: [
-        "$0.05 Per Page (Extraction + Abstraction)",
-        "$0.01 Per AI Message",
+        "$0.05 Per Page (AI Extraction Access)",
+        "$0.01 Per AI Message (AI Assistant Access)",
         "10 GB Document Storage",
-        "Pay-as-you-go",
-        "No Subscription",
+        "Pay As You Go • No Subscription",
       ],
-      note:
-        "One cent covers ~15 pages in and ~5 pages out. Split prompts above the cap—no surprise overages.",
+note: (
+  <>
+    <p>Choose flexible bundles at $10, $50, or $100.</p>
+    <p className="mt-2">Scale with your usage as you grow.</p>
+    <p className="mt-2">Only pay for what you use.</p>
+  </>
+),
       delay: "0.2s",
     },
     {
       title: "Doxali Professional",
-      subtitle: "(Usage Based)",
+      subtitle: "(Subscription)",
       features: [
-        "$38.99 Monthly Subscription",
-        "$0.01 Per Page",
-        "AI Chat: $0.00015 per 1k Input Tokens",
-        "AI Chat: $0.00060 per 1k Output Tokens",
+        "1000 Pages Monthly (AI Extraction Access)",
+        "500 AI Messages (AI Assistant Access)",
         "100 GB Document Storage",
+        "$19.99 Monthly Subscription",
       ],
-      note:
-        "Built for high volume teams—transparent, scalable, and fully unlocked.",
+      note: (
+    <>
+      <p>
+        Includes 1000 pages and 500 messages monthly. If you exceed these, you can continue using
+        credits at Standard Plan rates until your next cycle.
+      </p>
+      <p className="mt-2">Monthly Refresh.</p>
+    </>
+  ),
       delay: "0.4s",
     },
   ];
@@ -71,7 +84,7 @@ export default function Pricing() {
     title: "Doxali Enterprise",
     features: [
       "Custom Annual Contract (Contact Sales)",
-      "$0.005 Per Page (Extraction + Abstraction)",
+      "$0.005 Per Page (Extraction + Extraction)",
       "AI Chat: $0.00010 per 1 000 Input Tokens",
       "AI Chat: $0.00040 per 1 000 Output Tokens",
       "Up to 200 k Input + 50 k Output Tokens per Message",
@@ -119,7 +132,7 @@ export default function Pricing() {
                   </ul>
                 </div>
                 <div className="mt-6">
-                  <p className="text-xs text-gray-400 dark:text-gray-400 mb-4">{note}</p>
+<div className="text-xs text-gray-400 dark:text-gray-400 mb-4 space-y-2">{note}</div>
                   <div className="flex justify-end">
                     <a
                       href="/pricing"

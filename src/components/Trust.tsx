@@ -59,7 +59,7 @@ export default function Trust() {
         >
           Doxali runs on the same modern infrastructure trusted by the best teams in tech — 
           including GitHub, AWS, Cloudflare, and OpenAI. From authentication to AI to analytics, 
-          every part of our stack is engineered for speed, security, and reliability. Your legal data is encrypted, 
+          every part of our stack is engineered for speed, security, and reliability. Your data is encrypted, 
           your experience is fast, and your privacy is respected — by design.
         </p>
 

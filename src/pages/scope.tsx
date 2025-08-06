@@ -17,10 +17,10 @@ export default function ScopeDisclaimerPage() {
         <div className="bg-white dark:bg-[#1a1a1a] rounded-2xl shadow-md p-6 md:p-10 space-y-6">
           <h1 className="text-4xl font-bold">Scope Disclaimer</h1>
           <p>
-            Doxali currently supports a wide range of common legal documents including lease agreements, loan agreements, purchase & sale agreements (PSAs), NDAs, operating agreements, and select construction contracts.
+            Doxali currently supports a wide range of common document types including lease agreements, loan agreements, purchase & sale agreements (PSAs), NDAs, operating agreements, and select construction contracts.
           </p>
           <p>
-            We do not yet support litigation-related documents, legal opinions, highly customized or handwritten contracts, or scanned documents with poor OCR fidelity. Users are responsible for ensuring document clarity and legibility prior to upload.
+            We do not yet support uncommon document types, highly customized or handwritten contracts, or scanned documents with poor OCR fidelity. Users are responsible for ensuring document clarity and legibility prior to upload.
           </p>
           <p>
             Our scope is continually expanding. For the latest list of supported document types and clause categories, please refer to our documentation or contact{' '}

@@ -25,19 +25,19 @@ export default function App({ Component, pageProps }: AppProps) {
 
 
       <Head>
-        <title>Doxali | AI Powered Document Intelligence</title>
+        <title>Doxali | AI Powered Document Extraction</title>
         <meta
           name="description"
-          content="Doxali is an AI-powered platform for intelligent document analysis, data extraction, and workflow automation — built for legal, financial, business, and enterprise use cases."
+          content="Doxali is an AI Powered platform for intelligent document analysis, data extraction, and workflow automation — built for legal, financial, business, and enterprise use cases."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
 
         {/* Open Graph (OG) Tags */}
-        <meta property="og:title" content="Doxali | AI Powered Document Intelligence" />
+        <meta property="og:title" content="Doxali | AI Powered Document Extraction" />
         <meta
           property="og:description"
-          content="Doxali is an AI-powered platform for intelligent document analysis, data extraction, and workflow automation — built for legal, financial, business, and enterprise use cases."
+          content="Doxali is an AI Powered platform for intelligent document analysis, data extraction, and workflow automation — built for legal, financial, business, and enterprise use cases."
         />
         <meta property="og:image" content="/og-image.png" />
         <meta property="og:url" content="https://doxali.com" />
@@ -45,10 +45,10 @@ export default function App({ Component, pageProps }: AppProps) {
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Doxali | AI Powered Document Intelligence" />
+        <meta name="twitter:title" content="Doxali | AI Powered Document Extraction" />
         <meta
           name="twitter:description"
-          content="Doxali is an AI-powered platform for intelligent document analysis, data extraction, and workflow automation — built for legal, financial, business, and enterprise use cases."
+          content="Doxali is an AI Powered platform for intelligent document analysis, data extraction, and workflow automation — built for legal, financial, business, and enterprise use cases."
         />
         <meta name="twitter:image" content="/og-image.png" />
       </Head>

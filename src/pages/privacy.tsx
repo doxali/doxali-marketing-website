@@ -20,7 +20,7 @@ export default function PrivacyPage() {
             Your privacy is important to us. Doxali encrypts and stores your data securely using industry-standard methods. We do not sell or share your information with third parties for marketing purposes.
           </p>
           <p>
-            The data you provide is used solely to power Doxali's document abstraction services and to improve the platform through anonymized analytics.
+            The data you provide is used solely to power Doxali's document extraction services and to improve the platform through anonymized analytics.
           </p>
           <p>
             You may request access to or deletion of your personal data at any time by contacting{' '}

@@ -37,7 +37,7 @@ export default function Newsletter() {
           Join Our Inner Circle
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
-          Get insights, product updates, and AI-powered abstraction tips delivered straight to your inbox — no fluff, just real value.
+          Get insights, product updates, and AI Powered tips delivered straight to your inbox — no fluff, just real value.
         </p>
 
         <div className="max-w-xl mx-auto">

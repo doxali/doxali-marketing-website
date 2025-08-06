@@ -14,7 +14,7 @@ const faqData = [
   {
     question: 'How does per-page pricing work in the Standard Account?',
     answer:
-      'You’re charged $0.05 per page for both extraction and abstraction. This includes smart summaries and structured outputs based on your uploaded PDF.'
+      'You’re charged $0.05 per page for Extractions. This includes smart summaries and structured outputs based on your uploaded PDF or DOCX.'
   },
   {
     question: 'What does “$0.01 per AI message” mean?',
@@ -29,12 +29,12 @@ const faqData = [
   {
     question: 'How is the Professional Plan different from Standard?',
     answer:
-      'The Professional Plan is $38.99/month and offers deeply discounted rates: just $0.01/page, $0.00015 per 1k input tokens, and $0.00060 per 1k output tokens — plus 100 GB storage and full access to advanced chat features.'
+      'The Professional Plan is $19.99/month and offers deeply discounted rates: just $0.01/page, $0.00015 per 1k input tokens, and $0.00060 per 1k output tokens — plus 100 GB storage and full access to advanced chat features.'
   },
   {
     question: 'Who should choose the Enterprise Plan?',
     answer:
-      'Enterprise is for legal teams, high-scale users, and orgs needing SOC 2, SSO, or on-prem options. It includes unlimited storage, custom contracts, and our lowest per-unit pricing.'
+      'Enterprise is for Operational teams, high-scale users, and orgs needing SOC 2, SSO, or on-prem options. It includes unlimited storage, custom contracts, and our lowest per-unit pricing.'
   },
   {
     question: 'Are there hidden fees or usage caps?',
@@ -84,7 +84,7 @@ export default function FAQPricing() {
     >
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-center">
-          Pricing Questions, Answered Simply
+          Pricing Questions
         </h2>
 
         <label className="text-sm text-gray-500 dark:text-gray-400 mb-2 block">

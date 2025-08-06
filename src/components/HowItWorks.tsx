@@ -1,31 +1,31 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const steps = [
-  {
-    title: 'Step 1: Upload Your Legal Document',
-    description:
-      'Start by uploading any contract, agreement, or legal file. Doxali supports a wide range of formats — just drag and drop or select from your device.',
-  },
-  {
-    title: 'Step 2: Let AI Analyze Key Terms',
-    description:
-      'Our precision-trained AI scans your document for critical clauses, terms, and values. It highlights essentials like dates, obligations, payments, and more.',
-  },
-  {
-    title: 'Step 3: Review Structured Output',
-    description:
-      'Instantly view a clean, editable summary of your document. This includes extracted key terms, definitions, and obligations in a digestible format built for legal clarity.',
-  },
-  {
-    title: 'Step 4: Export or Generate Reports',
-    description:
-      'Download your structured results as Excel, JSON, or shareable formats. Use the data for internal tracking, negotiations, or client reporting.',
-  },
-  {
-    title: 'Step 5: Save Time, Reduce Errors',
-    description:
-      'Doxali replaces hours of document review with minutes of precision. Avoid missed details and streamline your workflow with confidence and control.',
-  },
+{
+  title: 'Step 1: Upload Your Document',
+  description:
+    'Start by uploading a contract, agreement, or supported file. Doxali accepts PDFs, Word docs, and text-based formats, just drag and drop or select from your device.',
+},
+{
+  title: 'Step 2: AI Powered Document Extraction',
+  description:
+    'Our GPT-4-enhanced AI scans the document to extract key terms: including dates, payments, obligations, and important clause informaion with contextual awareness.',
+},
+{
+  title: 'Step 3: AI Structured Document Summary',
+  description:
+    'Quickly review a clean, structured summary of all extracted terms. Sections are organized by clause type and include definitions, conditions, and counterparties.',
+},
+{
+  title: 'Step 4: Export Your AI Extraction',
+  description:
+    'Download a ready-to-use Excel file with extracted key terms organized and labeled. Great for internal tracking, collaboration, or keeping your records clean and searchable.',
+},
+{
+  title: 'Step 5: Automate Workflows with Doxali',
+  description:
+    'Doxali eliminates busywork so you can focus on decisions, not details. Whether you’re onboarding clients, reviewing vendor terms, or building internal processes, our AI helps you move with context and speed.',
+}
 ];
 
 export default function HowItWorks() {

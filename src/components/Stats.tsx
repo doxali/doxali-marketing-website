@@ -62,12 +62,12 @@ export default function Stats() {
   }, []);
 
 const stats: Stat[] = [
-  { value: '110', label: 'Document Types Supported' },
-  { value: '12', label: 'AI-Powered Add-On Features' },
-  { value: '90', label: 'Minutes Saved per Abstraction' },
+  { value: '3', label: 'Document Types Supported' },
+  { value: '45', label: 'Industries Served' },
+  { value: '120', label: 'Minutes Saved per Extraction' },
+  { value: '5', label: 'AI Powered Add-Ons (Coming Soon)' },
   { value: '99', label: 'Uptime Reliability (%)' },
-  { value: '43', label: 'Industries Served' },
-  { value: '28', label: 'Platform Integrations' },
+  { value: '1259', label: 'Workflows Automated' },
 ];
 
   return (
@@ -88,7 +88,7 @@ const stats: Stat[] = [
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          Discover the transformative power of our AI-driven platform in action.
+          Discover the transformative power of our AI driven platform in action.
         </p>
 
         <div className="flex justify-center mt-8">
