@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://doxali.com
+
+# Sitemaps
+Sitemap: https://doxali.com/sitemap.xml
