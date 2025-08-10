@@ -4,267 +4,209 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQPricing from "@/components/FAQPricing";
 import { Star } from 'lucide-react';
+import Link from "next/link";
 
 type BillingPeriod = "Monthly" | "Yearly";
 
 const plans = [
- {
-  shortTitle: "Free",
-  title: (
-    <div className="text-center">
-      Free Account
-      <br />
-      <span className="text-lx">(Quick Access)</span>
-    </div>
-  ),
-  price: {
-    Monthly: (
+  {
+    shortTitle: "Free",
+    title: (
       <div className="text-center">
-        <span className="text-xl font-bold">$0 Per Month</span>
+        Free Account
+        <br />
+        <span className="text-lx">(Quick Access)</span>
       </div>
     ),
-    Yearly: (
-      <div className="text-center">
-        <span className="text-xl font-bold">$0 Per Year</span>
+    price: {
+      Monthly: (
+        <div className="text-center">
+          <span className="text-xl font-bold">$0 Per Month</span>
+        </div>
+      ),
+      Yearly: (
+        <div className="text-center">
+          <span className="text-xl font-bold">$0 Per Year</span>
+        </div>
+      ),
+    },
+    note: (
+      <div className="text-center space-y-3">
+        <div className="flex items-center justify-center gap-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>5 Pages Per Day</span>
+        </div>
+        <div className="flex items-center justify-center gap-2 mt-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>3 Messages Per Day</span>
+        </div>
+        <div className="flex items-start justify-center gap-2 mt-2">
+          <Star className="w-4 h-4 mt-1 text-[#2fc4a0]" />
+          <div className="flex flex-col leading-tight text-left">
+            <span>1 Add On Per Day</span>
+            <span className="text-xs text-gray-500">(Coming Soon)</span>
+          </div>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>1 GB Document Storage</span>
+        </div>
+        <p className="mt-28">No Subscription</p>
+        <p className="mt-2">No Credit Card Required</p>
       </div>
     ),
+    isCurrent: true,
+    ctaLabel: "Get Started",
+    ctaHref: "/signup",
   },
-note: (
-  <div className="text-center space-y-2">
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>5 Pages Per Day</span>
-    </div>
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>AI Extraction Limited</span>
-    </div>
-    <div className="flex items-center justify-center gap-2 mt-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>3 Messages Per Day</span>
-    </div>
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>AI Assistant Limited</span>
-    </div>
-<div className="flex items-start justify-center gap-2 mt-2">
-  <Star className="w-4 h-4 mt-1 text-[#2fc4a0]" />
-  <div className="flex flex-col leading-tight text-left">
-    <span>1 Add On Per Day</span>
-    <span className="text-xs text-gray-500">(Coming Soon)</span>
-  </div>
-</div>
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>1 GB Document Storage</span>
-    </div>
-    <p className="mt-6">No Subscription</p>
-    <p className="mt-2">No Credit Card Required</p>
-  </div>
-),
-  isCurrent: true,
-  ctaLabel: "Get Started",
-  ctaHref: "/signup",
-},
- {
-  shortTitle: "Standard",
-  title: (
-    <div className="text-center">
-      Standard Account
-      <br />
-      <span className="text-lx">(Flat Usage Rate)</span>
-    </div>
-  ),
-  price: {
-    Monthly: (
+  {
+    shortTitle: "Standard",
+    title: (
       <div className="text-center">
-        <span className="text-xl">Pay-As-You-Go</span>
+        Standard Account
+        <br />
+        <span className="text-lx">(Usage Rate)</span>
       </div>
     ),
-    Yearly: (
-      <div className="text-center">
-        <span className="text-xl font-bold">Pay as you go</span>
+    price: {
+      Monthly: (
+        <div className="text-center">
+          <span className="text-xl">Pay-As-You-Go</span>
+        </div>
+      ),
+      Yearly: (
+        <div className="text-center">
+          <span className="text-xl font-bold">Pay as you go</span>
+        </div>
+      ),
+    },
+    note: (
+      <div className="text-center space-y-4">
+        <div className="flex items-center justify-center gap-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>$0.05 Per Page</span>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>AI Extraction + Summary</span>
+        </div>
+        <div className="flex items-center justify-center gap-2 mt-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>$0.01 Per AI Message</span>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>AI Assistant</span>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>Document Context</span>
+        </div>
+        <div className="flex items-center justify-center gap-2 mt-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>10 GB Document Storage</span>
+        </div>
+        <p className="mt-10">No Subscription</p>
+        <p className="mt-2">Pay-As-You-Go</p>
       </div>
     ),
+    ctaLabel: "Upgrade Plan",
+    ctaHref: "/upgradeplan/pay-as-you-go",
   },
-note: (
-  <div className="text-center space-y-2">
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>$0.05 Per Page</span>
-    </div>
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>AI Extraction + Summary</span>
-    </div>
-    <div className="flex items-center justify-center gap-2 mt-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>$0.01 Per AI Message</span>
-    </div>
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>AI Assistant</span>
-    </div>
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>Document Context</span>
-    </div>
-    <div className="flex items-center justify-center gap-2 mt-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>10 GB Document Storage</span>
-    </div>
-    <p className="mt-6">No Subscription</p>
-    <p className="mt-2">Pay-As-You-Go</p>
-  </div>
-),
-  ctaLabel: "Upgrade Plan",
-  ctaHref: "/billing/standard",
-},
   {
     shortTitle: "Professional",
     title: "Doxali Professional (Subscription)",
-price: {
-  Monthly: (
-    <div className="text-center">
-      <span className="text-xl font-bold">$19.99 Monthly</span>
-    </div>
-  ),
-  Yearly: (
-    <div className="text-center">
-      <span className="text-xl font-bold">
-        ${`${(19.99 * 12 * 0.9).toFixed(2)}`} Yearly
-      </span>
-      <br />
-      <span className="text-xs text-gray-500">(10% discount)</span>
-    </div>
-  ),
-},
-note: (
-  <div className="text-center space-y-2">
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>1000 Pages Per Month</span>
-    </div>
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>AI Extraction + Summary</span>
-    </div>
-    <div className="flex items-center justify-center gap-2 mt-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>500 Messages Per Month</span>
-    </div>
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>AI Assistant</span>
-    </div>
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>Comparison Context</span>
-    </div>
-    <div className="flex items-center justify-center gap-2 mt-2">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>100 GB Document Storage</span>
-    </div>
-    <div className="flex items-center justify-center gap-2 mt-6">
-      <Star className="w-4 h-4 text-[#2fc4a0]" />
-      <span>Access to All Add Ons</span>
-    </div>
-    <p className="mt-2 text-sm text-gray-500">(Coming Soon)</p>
-  </div>
-),
-isFeatured: true,
-ctaLabel: "Upgrade Plan",
-ctaHref: "/billing/pro",
-  },
- {
-  shortTitle: "Enterprise",
-  title: "Doxali Enterprise (Contact Sales)",
-  price: {
-    Monthly: (
-      <div className="text-center">
-        <span className="text-xl font-bold">Custom Contract</span>
+    price: {
+      Monthly: (
+        <div className="text-center">
+          <span className="text-xl font-bold">$19.99 Monthly</span>
+        </div>
+      ),
+      Yearly: (
+        <div className="text-center">
+          <span className="text-xl font-bold">
+            ${`${(215).toFixed(2)}`} Yearly
+          </span>
+          <br />
+        </div>
+      ),
+    },
+    note: (
+      <div className="text-center space-y-5">
+        <div className="flex items-center justify-center gap-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>1000 Pages Per Month</span>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>AI Extraction + Summary</span>
+        </div>
+        <div className="flex items-center justify-center gap-2 mt-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>500 Messages Per Month</span>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>AI Assistant</span>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>Comparison Context</span>
+        </div>
+        <div className="flex items-center justify-center gap-2 mt-2">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>100 GB Document Storage</span>
+        </div>
+        <div className="flex items-center justify-center gap-2 mt-6">
+          <Star className="w-4 h-4 text-[#2fc4a0]" />
+          <span>Access to All Add Ons</span>
+        </div>
+        <p className="mt-2 text-sm text-gray-500">(Coming Soon)</p>
       </div>
     ),
-    Yearly: (
-      <div className="text-center">
-        <span className="text-xl font-bold">Custom Contract</span>
-      </div>
-    ),
+    isFeatured: true,
+    ctaLabel: "Upgrade Plan",
+    ctaHref: "/upgradeplan/doxali-professional",
   },
-note: (
-  <div className="text-center space-y-2">
-    <div className="flex items-center justify-center gap-2 mt-2">
-      <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
-      <span>$0.005 Per Page</span>
-    </div>
-    <div className="flex items-center justify-center gap-2">
-      <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
-      <span>Abstraction + Extraction</span>
-    </div>
-    <div className="flex items-center justify-center gap-2 mt-2">
-      <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
-      <span>$0.0001 Per AI Message</span>
-    </div>
-<div className="flex items-center justify-center gap-2">
-  <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
-  <span>Up to 200k Input Tokens Per Message</span>
-</div>
-<div className="flex items-center justify-center gap-2 -mt-1">
-  <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
-  <span>Up to 50k Output Tokens Per Message</span>
-</div>
-    <div className="flex items-center justify-center gap-2 mt-6">
-      <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
-      <span>Customizable Storage Limit</span>
-    </div>
-    <div className="flex items-center justify-center gap-2 mt-4">
-      <Star className="w-[16px] h-[16px] text-[#2fc4a0] shrink-0" />
-      <span>Dedicated Account Manager, Concierge Support, SOC Type II</span>
-    </div>
-  </div>
-),
-  ctaLabel: "Contact Sales",
-  ctaHref: "/contact",
-}
 ];
 
 const comparisonSections = [
   {
     title: "Usage & Limits",
     rows: [
-      { label: "Pages Per Month", values: ["30", "Custom", "1,000", "Custom"] },
-      { label: "Messages Per Month", values: ["90", "Custom", "500", "Custom"] },
-      { label: "Usage Refresh Period", values: ["1 Day", "Custom", "1 Month", "1 Year"] },
-      { label: "Document Storage Space", values: ["1 GB", "10 GB", "100 GB", "Custom"] },
+      { label: "Pages Per Month", values: ["30", "Custom", "1,000"] },
+      { label: "Messages Per Month", values: ["90", "Custom", "500"] },
+      { label: "Usage Refresh Period", values: ["1 Day", "Custom", "1 Month"] },
+      { label: "Document Storage Space", values: ["1 GB", "10 GB", "100 GB"] },
     ],
   },
   {
     title: "Productivity Features",
     rows: [
-      { label: "AI Document Extraction", values: [true, true, true, true] },
-      { label: "AI Structured Document Summaries", values: [true, true, true, true] },
-      { label: "AI Document Assistant with Specific Context", values: [true, true, true, true] },
-      { label: "Document Storage Access", values: [true, true, true, true] },
-      { label: "Import Bult Documents", values: [false, true, true, true] },
-      { label: "Compare Multiple Documents with Specific Context", values: [false, false, true, true] },
+      { label: "AI Document Extraction", values: [true, true, true] },
+      { label: "AI Structured Document Summaries", values: [true, true, true] },
+      { label: "AI Document Assistant with Specific Context", values: [true, true, true] },
+      { label: "Document Storage Access", values: [true, true, true] },
+      { label: "Import Bulk Documents", values: [false, true, true] },
+      { label: "Compare Multiple Documents with Specific Context", values: [false, false, true] },
     ],
   },
   {
     title: "Security & Compliance",
     rows: [
-      { label: "Google SSO", values: [true, true, true, true] },
-      { label: "SOC 2 Type II Readiness", values: [true, true, true, true] },
-      { label: "HIPAA & GDPR Support", values: [true, true, true, true] },
-      { label: "Custom Data Retention Policies", values: [false, false, true, true] },
+      { label: "Google SSO", values: [true, true, true] },
+      { label: "SOC 2 Type II Readiness", values: [true, true, true] },
+      { label: "HIPAA & GDPR Support", values: [true, true, true] },
+      { label: "Custom Data Retention Policies", values: [false, false, true] },
     ],
   },
   {
     title: "Support & Services",
     rows: [
-      { label: "Email Support", values: [true, true, true, true] },
-      { label: "Priority Response Time", values: [false, false, true, true] },
-      { label: "Dedicated Account Support", values: [false, false, true, true] },
-      { label: "Custom Deployment & Onboarding", values: [false, false, false, true] },
+      { label: "Email Support", values: [true, true, true] },
+      { label: "Priority Response Time", values: [false, false, true] },
+      { label: "Dedicated Account Support", values: [false, false, true] },
+      { label: "Custom Deployment & Onboarding", values: [false, false, false] },
     ],
   },
 ];
@@ -314,25 +256,23 @@ export default function PricingPage() {
                    dark:from-[#2a2a2a] dark:via-[#111111] dark:to-black
                    text-[#0c1f1b] dark:text-white overflow-hidden"
       >
-        {/* Hero */}
-        <div className="max-w-3xl mx-auto text-center px-4 space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">
-            AI Access That Scales With Your Workflow
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Built to grow with your business whether you're solo or on a team.
-          </p>
-          <BillingToggle period={billingPeriod} setPeriod={setBillingPeriod} />
+{/* Hero */}
+<div className="max-w-3xl mx-auto text-center px-4 space-y-4">
+  <h1 className="text-4xl md:text-5xl font-bold">
+    AI Powered Document Extraction & Data Intelligence
+  </h1>
+  <p className="text-gray-600 dark:text-gray-400 text-lg">
+    Harness advanced AI to extract, structure, and analyze your documents turning complex data into clear, actionable insights that scale with your workflow.
+  </p>
+         <BillingToggle period={billingPeriod} setPeriod={setBillingPeriod} /> 
         </div>
 
 {/* Pricing Cards */}
-<div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
+<div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4 justify-items-center">
   {plans.map((plan) => (
     <div
       key={plan.shortTitle}
-      className={`
-        group transition-all duration-300 transform hover:scale-105
-      `}
+      className="group transition-all duration-300 transform hover:scale-105 w-full max-w-sm"
     >
       <div
         className={`
@@ -354,27 +294,23 @@ export default function PricingPage() {
 
         <div>
           <h2 className="text-xl font-semibold text-center">{plan.title}</h2>
-          <div className="mt-4 text-3xl font-bold">
-            {plan.price[billingPeriod]}
-          </div>
+          <div className="mt-4 text-3xl font-bold">{plan.price[billingPeriod]}</div>
           <div className="mt-4 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-  {plan.note}
-</div>
+            {plan.note}
+          </div>
         </div>
 
-        <a
-          href={plan.ctaHref}
-          className={`
-            mt-6 block w-full text-center font-semibold rounded-full px-6 py-3
-            ${
-              plan.isCurrent
-                ? "border-2 border-[#2fc4a0] text-[#2fc4a0] bg-transparent cursor-default"
-                : "bg-gradient-to-r from-[#2fc4a0] to-[#28b093] text-white hover:opacity-90"
-            }
-          `}
+        <Link
+          href={typeof plan.ctaHref === "string" ? plan.ctaHref : "/signup"}
+          className={`relative z-10 mt-6 block w-full text-center font-semibold rounded-full px-6 py-3 ${
+            plan.isCurrent
+              ? "border-2 border-[#2fc4a0] text-[#2fc4a0] bg-transparent cursor-default"
+              : "bg-gradient-to-r from-[#2fc4a0] to-[#28b093] text-white hover:opacity-90"
+          }`}
+          aria-label={`Go to ${plan.shortTitle} plan details`}
         >
-          {plan.isCurrent ? "Current Plan" : plan.ctaLabel}
-        </a>
+          {plan.isCurrent ? "Current Plan" : plan.ctaLabel ?? "Get Started"}
+        </Link>
       </div>
     </div>
   ))}
@@ -430,7 +366,7 @@ export default function PricingPage() {
     </tbody>
   </table>
   <p className="mt-4 text-right text-sm text-gray-600 dark:text-gray-400">
-    or <a href="/contact" className="underline">contact sales</a>
+    or <a href="/upgradeplan/doxali-enterprise" className="underline">contact sales</a>
   </p>
 </section>
       </main>

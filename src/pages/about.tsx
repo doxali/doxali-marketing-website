@@ -153,21 +153,6 @@ const [visible, setVisible] = useState(true);
   </div>
 </section>
 
-{/* Leadership */}
-        <section
-          className={
-            "space-y-10 opacity-0 transition-opacity" +
-            (visible ? " animate-(--animate-fade-up-in) [animation-delay:0.3s]" : "")
-          }
-        >
-          <h2 className="text-3xl font-bold mb-4 text-center">Leadership & Culture</h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {LEADERS.map((leader) => (
-              <LeaderCard key={leader.name} {...leader} />
-            ))}
-          </div>
-        </section>
-
         {/* Timeline */}
         <section
           className={

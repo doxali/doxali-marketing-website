@@ -60,7 +60,7 @@ export default function Hero() {
             AI Powered
           </span>
           <br />
-          <span className="relative">Document Extraction</span>
+          <span className="relative">Document Intelligence</span>
         </h1>
 
         <div className={fadeIn(300)}>

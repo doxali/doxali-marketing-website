@@ -162,6 +162,23 @@ useEffect(() => {
         </div>
 
       </div>
+         {/* Trust indicators */}
+<div className="flex justify-center items-center space-x-8 mt-12 ...">
+  <div className="flex items-center space-x-2">
+    <div className="w-3 h-3 bg-[#2fc4a0] rounded-full"></div>
+    <span className="text-xs text-slate-700 dark:text-slate-400">99.9% Uptime</span>
+  </div>
+  <div className="w-px h-4 bg-gray-300 dark:bg-slate-600"></div>
+  <div className="flex items-center space-x-2">
+    <div className="w-3 h-3 bg-[#6fe1c3] rounded-full"></div>
+    <span className="text-xs text-slate-700 dark:text-slate-400">SOC 2 Compliant</span>
+  </div>
+  <div className="w-px h-4 bg-gray-300 dark:bg-slate-600"></div>
+  <div className="flex items-center space-x-2">
+    <div className="w-3 h-3 bg-[#a4f0da] rounded-full"></div>
+    <span className="text-xs text-slate-700 dark:text-slate-400">GDPR Ready</span>
+  </div>
+</div>
       <style jsx>{`
   @keyframes particleFloat {
     0% {

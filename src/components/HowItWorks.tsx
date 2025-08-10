@@ -2,22 +2,22 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const steps = [
 {
-  title: 'Step 1: Upload Your Document',
+  title: 'Step 1: Upload Your PDF or Document',
   description:
     'Start by uploading a contract, agreement, or supported file. Doxali accepts PDFs, Word docs, and text-based formats, just drag and drop or select from your device.',
 },
 {
-  title: 'Step 2: AI Powered Document Extraction',
+  title: 'Step 2: AI Powered Document Data Extraction',
   description:
     'Our GPT-4-enhanced AI scans the document to extract key terms: including dates, payments, obligations, and important clause informaion with contextual awareness.',
 },
 {
-  title: 'Step 3: AI Structured Document Summary',
+  title: 'Step 3: AI Structured Document Data Summary',
   description:
     'Quickly review a clean, structured summary of all extracted terms. Sections are organized by clause type and include definitions, conditions, and counterparties.',
 },
 {
-  title: 'Step 4: Export Your AI Extraction',
+  title: 'Step 4: Export Your AI Data Extraction',
   description:
     'Download a ready-to-use Excel file with extracted key terms organized and labeled. Great for internal tracking, collaboration, or keeping your records clean and searchable.',
 },

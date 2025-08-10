@@ -99,15 +99,15 @@ export default function ProductPage() {
         {/* Hero Section */}
         <section className="pt-24 pb-10 px-6 text-center">
           <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Why Doxali?
-          </h1>
-<div className="text-lg text-left leading-relaxed max-w-4xl mx-auto mb-8 space-y-8 text-gray-700 dark:text-gray-300">
+  Why Doxali?
+</h1>
+<div className="mt-15 text-lg text-left leading-relaxed max-w-4xl mx-auto mb-8 space-y-8 text-gray-700 dark:text-gray-300">
   <p>
-    Doxali is built for teams that work with complex contracts, financial agreements, and regulatory documents, and want answers, not just files. Whether you're managing leases, loan agreements, or purchase contracts, our AI extracts critical information in seconds, reducing manual review and freeing your team to focus on analysis and action. Unlike traditional tools that require templates or predefined fields, Doxali understands unstructured language. It identifies key clauses, flags risk language, and delivers structured summaries that are easy to review, export, and integrate into your workflow. No training required.
+    Automate operations with AI driven digital solutions. Doxali is built for teams that work with complex contracts, financial agreements, and regulatory documents, and want answers, not just files. Whether you're managing leases, loan agreements, or purchase contracts, our AI extracts critical information in minutes.
   </p>
 
   <p>
-    Transparency is core to our approach. We offer per page and per message pricing, so you only pay for what you use. Every document processed includes a downloadable summary for your records, and enterprise users can scale with advanced features like SOC 2 compliance, SSO, and dedicated token pools. Our goal is to help legal, finance, and operations teams work faster. Not replace them. By combining AI with Specific Context (never chunked or embedded data), Doxali turns every document into a source of knowledge.
+    Our goal is to help legal, finance, and operations teams work faster. Not replace them. By combining AI with Specific Context (never chunked or embedded data), Doxali turns every document into a source of knowledge.
   </p>
 
   <p>

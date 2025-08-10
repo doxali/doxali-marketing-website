@@ -65,9 +65,9 @@ const stats: Stat[] = [
   { value: '3', label: 'Document Types Supported' },
   { value: '45', label: 'Industries Served' },
   { value: '120', label: 'Minutes Saved per Extraction' },
-  { value: '5', label: 'AI Powered Add-Ons (Coming Soon)' },
-  { value: '99', label: 'Uptime Reliability (%)' },
+  { value: '5', label: 'Extraction Add-Ons (Coming Soon)' },
   { value: '1259', label: 'Workflows Automated' },
+  { value: '99', label: 'Uptime Reliability (%)' },
 ];
 
   return (
