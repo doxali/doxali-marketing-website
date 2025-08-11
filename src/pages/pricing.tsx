@@ -392,14 +392,15 @@ useEffect(() => {
 </section>
       </main>
 
-{/* Feature Section (placed above FAQ) */}
+{/* Feature Section */}
 <section
   ref={featureRef}
-className="pt-0 pb-16 bg-white dark:bg-black text-[var(--foreground)]"
+  className="pt-6 pb-6 bg-white dark:bg-black"
 >
   <div
     className={
-      'max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center gap-16 transition-all duration-1000 ' +
+      // match the table section: max-w-4xl + px-4
+      'max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12 transition-all duration-1000 ' +
       (featureVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6')
     }
   >
@@ -409,18 +410,18 @@ className="pt-0 pb-16 bg-white dark:bg-black text-[var(--foreground)]"
         <img
           src="/Doxaliapp.png"
           alt="Doxali App Interface"
-          className="w-full h-auto object-cover"
+          className="block w-full h-auto"
         />
       </div>
     </div>
 
     {/* Right: Text */}
-    <div className="flex-1 order-1 md:order-2 text-left min-h-[500px]">
+    <div className="flex-1 order-1 md:order-2 text-left">
       <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
         Meet Your<br />
         <span className="text-[#2fc4a0]">AI Document Assistant</span>
       </h2>
-      <div className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-2xl space-y-6">
+      <div className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed max-w-xl space-y-6">
         <p>Documents can be dense, slow, and costly to process.</p>
         <p>
           <span className="text-[#2fc4a0] font-semibold">Doxali’s AI Assistant</span> changes that — giving you an on-demand expert that pulls key clauses, summarizes contracts, and delivers structured insights in seconds.
@@ -429,8 +430,8 @@ className="pt-0 pb-16 bg-white dark:bg-black text-[var(--foreground)]"
         <p>
           Whether you're reviewing NDAs, leases, or technical specs, Doxali ensures you never miss a critical clause. With contextual understanding and structured extraction, it's built to save professionals time and reduce risk — while giving teams confidence in every decision they make.
         </p>
-        <p>
-          No more CTRL+F guesswork or endless scrolling. Doxali helps you zero in on obligations, renewal windows, and liability exposure instantly — making document comprehension faster, smarter, and more actionable.
+                <p>
+          Whether you're reviewing NDAs, leases, or technical specs, Doxali ensures you never miss a critical clause. With contextual understanding and structured extraction, it's built to save professionals time and reduce risk — while giving teams confidence in every decision they make.
         </p>
       </div>
     </div>

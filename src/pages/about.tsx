@@ -97,7 +97,7 @@ function LeaderCard({ name, role, photo, linkedin }: { name: string; role: strin
 
 export default function AboutPage() {
   const sectionRef = useRef<HTMLDivElement>(null);
-const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const node = sectionRef.current;
@@ -116,42 +116,50 @@ const [visible, setVisible] = useState(true);
   }, []);
 
   return (
-<div className="min-h-screen flex flex-col bg-gradient-to-b from-[#d1fae5] to-white dark:from-[#2a2a2a] dark:via-[#111111] dark:to-black transition-colors duration-300">
+<div
+  className="
+    min-h-screen flex flex-col
+    bg-[linear-gradient(to_bottom,#d1fae5_0%,#e9fdf5_40%,white_60%,white_100%)]
+    dark:bg-[linear-gradient(to_bottom,#2a2a2a_0%,#111111_40%,#000_60%,#000_100%)]
+    transition-colors duration-300
+  "
+>
+
       <Header />
 
-<main
-  ref={sectionRef}
-  className="flex-1 w-full max-w-6xl mx-auto px-6 md:px-10 pt-16 space-y-24 text-[var(--foreground)]"
->
-      {/* Hero + Metrics */}
-<section
-  className={
-    "grid md:grid-cols-2 gap-16 items-center opacity-0 transition-opacity" +
-    (visible ? " animate-[fade-up-in_0.6s_ease-out_forwards]" : "")
-  }
->
-  <div>
-    <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-6">
-      AI That Understands Documents.<br />
-      <span className="text-[#2fc4a0]">Structured. Secure. Scalable.</span>
-    </h1>
-    <p className="text-lg text-gray-700 dark:text-gray-300 max-w-prose mb-8">
-      Doxali extracts critical clauses, structures your data, and summarizes complex documents — all in seconds, with real-world data precision.
-    </p>
-    <Link
-      href="/launch"
-      className="inline-block bg-white text-[#2fc4a0] font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-gray-100 transition"
-    >
-      Get Started Free
-    </Link>
-  </div>
+      <main
+        ref={sectionRef}
+        className="flex-1 w-full max-w-6xl mx-auto px-6 md:px-10 pt-16 space-y-24 text-[var(--foreground)]"
+      >
+        {/* Hero + Metrics */}
+        <section
+          className={
+            "grid md:grid-cols-2 gap-16 items-center opacity-0 transition-opacity" +
+            (visible ? " animate-[fade-up-in_0.6s_ease-out_forwards]" : "")
+          }
+        >
+          <div>
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-6">
+              AI That Understands Documents.<br />
+              <span className="text-[#2fc4a0]">Structured. Secure. Scalable.</span>
+            </h1>
+            <p className="text-lg text-gray-700 dark:text-gray-300 max-w-prose mb-8">
+              Doxali extracts critical clauses, structures your data, and summarizes complex documents — all in seconds, with real-world data precision.
+            </p>
+            <Link
+              href="/launch"
+              className="inline-block bg-white text-[#2fc4a0] font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-gray-100 transition"
+            >
+              Get Started Free
+            </Link>
+          </div>
 
-  <div className="grid grid-cols-2 gap-6 self-start">
-    {SNAPSHOT_METRICS.map(({ value, label }) => (
-      <StatCard key={label} value={value} label={label} />
-    ))}
-  </div>
-</section>
+          <div className="grid grid-cols-2 gap-6 self-start">
+            {SNAPSHOT_METRICS.map(({ value, label }) => (
+              <StatCard key={label} value={value} label={label} />
+            ))}
+          </div>
+        </section>
 
         {/* Timeline */}
         <section
@@ -182,99 +190,139 @@ const [visible, setVisible] = useState(true);
           </div>
         </section>
 
-        {/* Vision + Origin */}
+        {/* Why Doxali – Modern SaaS proof section */}
         <section
           className={
-            "space-y-6 opacity-0 transition-opacity" +
-            (visible ? " animate-(--animate-fade-up-in) [animation-delay:0.45s]" : "")
+            "opacity-0 transition-opacity" +
+            (visible ? " animate-(--animate-fade-up-in) [animation-delay:0.25s]" : "")
           }
         >
-          <h2 className="text-3xl font-bold mb-2">Our Mission</h2>
-          <p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  Operations should be a launchpad, not a roadblock.
-</p>
-<p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  At Doxali, we believe teams should spend their time driving strategic decisions, not buried in repetitive admin work.
-</p><p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  That’s why we built a precision-engineered platform that automates contract analysis, document review, and term Extraction. We eliminate the bottlenecks so teams can move faster, operate smarter, and deliver higher value across the business.
-</p>
-          <h2 className="text-3xl font-bold mt-8">How It Started</h2>
-          <p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  It began in a war room at midnight.
-</p>
+          <div className="relative overflow-hidden rounded-2xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/[0.03] p-8 md:p-10">
+            {/* subtle grid background */}
+            <div className="pointer-events-none absolute inset-0 [mask-image:radial-gradient(65%_60%_at_50%_40%,black,transparent)]">
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.06)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[length:24px_24px]"></div>
+              <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[#2fc4a0]/20 blur-3xl"></div>
+            </div>
 
-<p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  The deal was massive, one of those high-pressure, make-or-break transactions. But instead of finalizing terms, the our team was still combing through a 200-page contract, highlighting clauses by hand and cross-checking outdated spreadsheets. Tempers flared. Deadlines slipped. And what should have been strategic work felt more like digital janitorial duty.
-</p>
+            <div className="relative">
+              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-center">
+                Why teams choose <span className="text-[#2fc4a0]">Doxali</span>
+              </h2>
+              <p className="mt-3 text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                A focused platform for turning unstructured contracts into structured, review-ready data—fast, consistent, and secure.
+              </p>
 
-<p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  That night, one of our founders a former M&A Attorney, had enough. He called two longtime collaborators: an AI Engineer with a background in natural language processing, and a UX Designer who had streamlined systems for fast-moving startups. The question was simple:
-</p>
+              {/* Pillars */}
+              <div className="mt-10 grid gap-4 md:grid-cols-3">
+                <div className="rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#1a1a1a] p-5 shadow-sm">
+                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#2fc4a0]/10 text-[#2fc4a0] font-bold">①</div>
+                  <h3 className="font-semibold text-lg">Precision extraction</h3>
+                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    Clause-level understanding tuned for commercial, legal, and ops workflows. Reduce variance and rework.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#1a1a1a] p-5 shadow-sm">
+                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#2fc4a0]/10 text-[#2fc4a0] font-bold">②</div>
+                  <h3 className="font-semibold text-lg">Structured by design</h3>
+                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    Output mapped to your fields, schemas, and downstream systems—no brittle regex or manual cleanup.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#1a1a1a] p-5 shadow-sm">
+                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#2fc4a0]/10 text-[#2fc4a0] font-bold">③</div>
+                  <h3 className="font-semibold text-lg">Security first</h3>
+                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    Private by default. Granular access, audit trails, and region-aware processing for sensitive data.
+                  </p>
+                </div>
+              </div>
 
-<p className="text-gray-600 dark:text-gray-400 mt-4 indent-8 italic">
-  "What if teams didn’t have to work this way anymore?"
-</p>
+              {/* Proof row */}
+              <div className="mt-8 flex flex-col md:flex-row items-stretch gap-4">
+                <div className="flex-1 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#1a1a1a] p-5">
+                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">What you get</h4>
+                  <ul className="mt-3 space-y-2 text-sm">
+                    <li className="flex gap-2"><span className="mt-1 h-2 w-2 rounded-full bg-[#2fc4a0]"></span>Risk flags with rationale and source lines</li>
+                    <li className="flex gap-2"><span className="mt-1 h-2 w-2 rounded-full bg-[#2fc4a0]"></span>Normalized fields (party, dates, economics, obligations)</li>
+                    <li className="flex gap-2"><span className="mt-1 h-2 w-2 rounded-full bg-[#2fc4a0]"></span>One-click CSV / API handoff</li>
+                  </ul>
+                </div>
+                <div className="flex-1 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#1a1a1a] p-5">
+                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Built-in trust</h4>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <span className="px-3 py-1 rounded-full text-xs bg-[#2fc4a0]/10 text-[#2fc4a0] border border-[#2fc4a0]/20">SOC 2-ready</span>
+                    <span className="px-3 py-1 rounded-full text-xs bg-[#2fc4a0]/10 text-[#2fc4a0] border border-[#2fc4a0]/20">PII Safe</span>
+                    <span className="px-3 py-1 rounded-full text-xs bg-[#2fc4a0]/10 text-[#2fc4a0] border border-[#2fc4a0]/20">GDPR-aligned</span>
+                    <span className="px-3 py-1 rounded-full text-xs bg-[#2fc4a0]/10 text-[#2fc4a0] border border-[#2fc4a0]/20">Encryption at rest & transit</span>
+                  </div>
+                </div>
+                <div className="flex-1 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#1a1a1a] p-5">
+                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">Customer snapshot</h4>
+                  <blockquote className="mt-3 text-sm leading-relaxed">
+                    “Doxali cut our review time by 70% and standardized fields across vendors—our team finally ships on time.”
+                  </blockquote>
+                  <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">VP Ops, Mid-Market SaaS</p>
+                </div>
+              </div>
 
-<p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  Within weeks, the team began prototyping. Not another clunky database or contract repository, but a real system that could think: intelligently extract key terms, surface risks, and structure documents for review before anyone hit Ctrl+F.
-</p>
+              {/* Comparison */}
+              <div className="mt-8 grid md:grid-cols-2 gap-4">
+                <div className="rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#1a1a1a] p-5">
+                  <h4 className="font-semibold">The old way</h4>
+                  <ul className="mt-3 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                    <li>• Ctrl+F, copy-paste, and spreadsheet sprawl</li>
+                    <li>• Inconsistent extractions and reviewer bias</li>
+                    <li>• Weeks to roll up deal intelligence</li>
+                  </ul>
+                </div>
+                <div className="rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#1a1a1a] p-5 ring-1 ring-[#2fc4a0]/10">
+                  <h4 className="font-semibold">With Doxali</h4>
+                  <ul className="mt-3 space-y-2 text-sm">
+                    <li className="flex gap-2"><span className="mt-1 h-2 w-2 rounded-full bg-[#2fc4a0]"></span>Review-ready summaries & fields in seconds</li>
+                    <li className="flex gap-2"><span className="mt-1 h-2 w-2 rounded-full bg-[#2fc4a0]"></span>Consistency at scale with schema controls</li>
+                    <li className="flex gap-2"><span className="mt-1 h-2 w-2 rounded-full bg-[#2fc4a0]"></span>Instant exports to your systems</li>
+                  </ul>
+                </div>
+              </div>
 
-<p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  By early 2025, Doxali was born built to eliminate manual friction, accelerate decision-making, and give teams their strategic edge back.
-</p>
-
-<p className="text-gray-600 dark:text-gray-400 mt-4 indent-8 font-semibold text-center">
-  We didn’t just build a product. <br />
-  We built the platform we wish we had that night.
-          </p>
-          <h2 className="text-3xl font-bold mt-8">In Good Company</h2>
-         <p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  <span className="font-semibold">AWS</span> powers our core infrastructure, giving us the ability to scale on demand while maintaining best-in-class uptime, availability, and global reach. From compute to storage, we rely on AWS to deliver a secure and resilient cloud foundation.
-</p>
-
-<p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  <span className="font-semibold">Cloudflare</span> protects and accelerates every interaction with Doxali. With enterprise-grade DDoS mitigation, edge caching, and traffic optimization, our users enjoy fast, secure access, no matter where they are in the world.
-</p>
-
-<p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  <span className="font-semibold">Stripe</span> handles our billing with trusted payment infrastructure and full PCI compliance. Clients can onboard, subscribe, and manage accounts with confidence, backed by encrypted, seamless transactions.
-</p>
-
-<p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  <span className="font-semibold">Clerk</span> manages identity, authentication, and user management with modern security protocols — including passwordless login, two-factor authentication, and real-time session tracking — all fully integrated into our platform.
-</p>
-
-<p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
-  <span className="font-semibold">OpenAI</span> powers the intelligence layer of Doxali, enabling our platform to read, extract, and structure data from contracts and documents using cutting-edge language models trained on real-world automation workflows.
-</p>
-
-<p className="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed font-semibold text-center">
-  Security, speed, and scalability is not optional, it's built into every layer of Doxali.
-</p>
-          <p className="text-gray-600 dark:text-gray-400 mt-6 text-center">
-            Want to get in touch? Reach out at <a href="mailto:team@doxali.com" className="text-[#2fc4a0] underline">team@doxali.com</a>.
-          </p>
+              {/* micro-cta */}
+              <div className="mt-8 flex items-center justify-center gap-3">
+                <Link
+                  href="/launch"
+                  className="inline-flex items-center justify-center rounded-xl bg-[#2fc4a0] px-5 py-2.5 font-semibold text-white shadow-lg hover:brightness-95 transition"
+                >
+                  Start free
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-xl border border-gray-200 dark:border-white/20 bg-white dark:bg-transparent px-5 py-2.5 font-semibold text-[var(--foreground)] hover:bg-gray-50 dark:hover:bg-white/5 transition"
+                >
+                  Talk to us
+                </Link>
+              </div>
+            </div>
+          </div>
         </section>
 
-<FAQAbout />
-{/* CTA Band */}
-<div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#2fc4a0] dark:bg-[#28b093] text-center overflow-hidden">
-  <div className="max-w-6xl mx-auto px-6 py-16">
-    <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 drop-shadow-lg">
-      AI Powered Data Extraction 
-    </h2>
-    <p className="text-white/90 mb-8 text-lg max-w-xl mx-auto">
-      Try Doxali free! Upload a document and experience fast, accurate extraction.
-    </p>
-    <Link
-      href="/launch"
-      className="inline-block bg-white text-[#2fc4a0] font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-gray-100 transition"
-    >
-      Get Started Free
-    </Link>
-  </div>
-</div>
+        <FAQAbout />
 
+        {/* CTA Band */}
+        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#2fc4a0] dark:bg-[#28b093] text-center overflow-hidden">
+          <div className="max-w-6xl mx-auto px-6 py-16">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 drop-shadow-lg">
+              AI Powered Data Extraction 
+            </h2>
+            <p className="text-white/90 mb-8 text-lg max-w-xl mx-auto">
+              Try Doxali free! Upload a document and experience fast, accurate extraction.
+            </p>
+            <Link
+              href="/launch"
+              className="inline-block bg-white text-[#2fc4a0] font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-gray-100 transition"
+            >
+              Get Started Free
+            </Link>
+          </div>
+        </div>
       </main>
 
       <Footer />
